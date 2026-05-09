@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NAAC Accreditation Automation System
 
 A full-stack web application for automating NAAC accreditation processes, including criteria management, metrics tracking, scoring, and report generation.
@@ -130,3 +131,6 @@ The React dev server starts at **http://localhost:3000** and proxies `/api` requ
 | 2.01 – 2.50| B    |
 | 1.51 – 2.00| C    |
 | ≤ 1.50     | D    |
+=======
+# NAAC-Accreditation-Role--based-automatic-system-
+>>>>>>> 7921d1605b3771d7bbfb8177e78d0caa12cd8fc7
