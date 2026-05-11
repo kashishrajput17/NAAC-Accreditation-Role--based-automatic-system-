@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: naac-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - naac-db-volume:/app/instance
+    environment:
+      - DATABASE_URL=sqlite:///naac.db
+      - JWT_SECRET_KEY=YOUR_SECURE_RANDOM_SECRET_KEY
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: naac-frontend
+    ports:
+      - "80:80"
+      - "3000:80" # Allows reaching the standard port users tested against
+    environment:
+      - VITE_API_URL=http://localhost:5000
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  naac-db-volume:
